@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+ <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+body{
+    background-image: url("https://ssfgc.ac.in/wp-content/uploads/2025/11/gsss-fg-mainslider.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.card{
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(5px);
+}
+</style>
+<body class="bg-light">
+    <!-- Header -->
+<div class="container-fluid py-2">
+<div class="container-fluid px-3">
+<div class="card shadow-lg border-0 rounded-4">
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="row align-items-center">
+
+    <!-- Dashboard Menu -->
+    <div class="col-md-1 text-start">
+        <button class="btn btn-outline-primary"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#dashboardMenu">
+            ☰
+        </button>
+    </div>
+
+                    <!-- College Logo -->
+                    <div class="col-md-2 text-center">
+<img src="https://ssfgc.ac.in/wp-content/uploads/2025/11/gsss-logo.png"
+                             class="rounded-circle shadow"
+                             style="width:120px;height:120px;object-fit:cover;">
+                    </div>
+                    <!-- College Details -->
+                    <div class="col-md-7 text-center">
+                        <h2 class="fw-bold text-primary">
+                            GSSS Simha Subba Mahalakshmi First Grade College
+                        </h2>
+                        <h5 class="text-secondary">
+                            Mysuru
+                           </h5>
+                        <h4 class="fw-bold text-success">
+                            NATIONAL SERVICE SCHEME
+                        </h4>
+                        <p class="mb-1">
+                            <strong>Motto:</strong> Not Me But You
+                        </p>
+                        <p>
+                            <strong>Serving Since:</strong> 1969
+                        </p>
+                    </div>
+                    <!-- NSS Logo -->
+                    <div class="col-md-2 text-center">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjitauQjHOaoSeref-podS8u1_1KUutySI6W1T4cg2gw&s"
+                             class="rounded-circle shadow"
+                             style="width:120px;height:120px;object-fit:cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Two Column Layout -->
+<!-- Three Equal Columns -->
+<div class="container-fluid mt-4">
+
+    <div class="row">
+
+        <!-- ================= Notifications ================= -->
+        <div class="col-lg-4 mb-4">
+
+            <div class="card shadow h-100">
+
+                <div class="card-header bg-primary text-white">
+                    Latest Announcements
+                </div>
+                <!-- Greeting Section -->
+<div class="card-body border-bottom bg-light">
+
+    <h5 id="greeting"
+        class="fw-bold text-primary mb-2">
+        Welcome!
+    </h5>
+
+    <p class="mb-1">
+        <strong>Date:</strong>
+        <span id="currentDate"></span>
+    </p>
+
+    <p class="mb-0">
+        <strong>Current Time:</strong>
+        <span id="currentTime"
+              class="fw-bold text-success"></span>
+    </p>
+
+</div>
+
+                <div class="card-body" style="height:600px; overflow-y:auto;">
+
+                    <!-- Notification 1 -->
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h6 class="card-title text-primary">
+                                NSS Volunteers Meeting
+                            </h6>
+
+                            <p class="card-text mb-1">
+                                All NSS volunteers must attend the meeting tomorrow
+                                at 10:00 AM in the Seminar Hall.
+                            </p>
+
+                            <small class="text-muted">
+                                Posted: Today | Programme Officer
+                            </small>
+                        </div>
+                    </div>
+
+                    <!-- Notification 2 -->
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h6 class="card-title text-success">
+                                Blood Donation Camp Registration
+                            </h6>
+
+                            <p class="card-text mb-1">
+                                Online registration is now open for the upcoming
+                                Blood Donation Camp. Last date: 18 July 2026.
+                            </p>
+
+                            <small class="text-muted">
+                                Posted: Yesterday | NSS Cell
+                            </small>
+                        </div>
+                    </div>
+
+                    <!-- Notification 3 -->
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h6 class="card-title text-dark">
+                                Tree Plantation Drive
+                            </h6>
+
+                            <p class="card-text mb-1">
+                                Students interested in participating are requested
+                                to register before Friday.
+                            </p>
+
+                            <small class="text-muted">
+                                Posted: Yesterday | Eco Club
+                            </small>
+                        </div>
+                    </div>
+
+                    <!-- Notification 4 -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h6 class="card-title text-warning">
+                                Independence Day Volunteers
+                            </h6>
+
+                            <p class="card-text mb-1">
+                                Volunteers are invited to register for the
+                                Independence Day celebration arrangements.
+                            </p>
+
+                            <small class="text-muted">
+                                Posted: 2 Days Ago | Cultural Committee
+                            </small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ================= Login ================= -->
+        <div class="col-lg-4 mb-4">
+
+            <div class="card shadow-lg h-100">
+
+                <div class="card-body p-4">
+
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+
+                        <h3 class="fw-bold mb-0">
+                            Login
+                        </h3>
+
+                        <a href="Register.html"
+                           class="fw-bold text-decoration-none border border-primary rounded px-3 py-1">
+                            New Register!
+                        </a>
+
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label fw-bold">
+                            Login As
+                        </label>
+
+                        <select class="form-select">
+                            <option selected>Select Login Type</option>
+                            <option>Student Login</option>
+                            <option>Lecturer Login</option>
+                            <option>Guest View</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">
+                            Username / ID
+                        </label>
+
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Enter Username">
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label fw-bold">
+                            Password
+                        </label>
+
+                        <input type="password"
+                               class="form-control"
+                               placeholder="Enter Password">
+                    </div>
+<!-- CAPTCHA -->
+<div class="mb-4">
+
+    <label class="form-label fw-bold">
+        CAPTCHA Verification
+    </label>
+
+    <div class="d-flex align-items-center mb-2">
+
+        <canvas id="captchaCanvas"
+                width="170"
+                height="50"
+                class="border rounded bg-light me-3">
+        </canvas>
+
+        <button type="button"
+                class="btn btn-outline-primary"
+                onclick="generateCaptcha()">
+            ↻ Refresh
+            <script>
+                
+
+function validateCaptcha() {
+
+    const userInput =
+        document.getElementById("captchaInput")
+        .value
+        .trim()
+        .toUpperCase();
+
+    const message =
+        document.getElementById("captchaMessage");
+
+    if(userInput === captchaCode){
+
+        message.className = "text-success";
+
+        message.innerHTML =
+            "CAPTCHA Verified Successfully.";
+
+        // Redirect to dashboard after successful login
+        // window.location.href="dashboard.html";
+
+    }
+
+    else{
+
+        message.className = "text-danger";
+
+        message.innerHTML =
+            "Incorrect CAPTCHA. Please try again.";
+
+        generateCaptcha();
+
+        document.getElementById("captchaInput").value="";
+
+    }
+
+}
+
+</script>
+        </button>
+
+    </div>
+
+    <input type="text"
+           id="captchaInput"
+           class="form-control"
+           placeholder="Enter the CAPTCHA shown above">
+
+    <small id="captchaMessage" class="text-danger"></small>
+
+</div>
+                    <div class="d-grid mb-4">
+                        <button type="button"
+        class="btn btn-primary"
+        onclick="validateCaptcha()">
+    Login
+</button>
+                    </div>
+
+                    <div class="text-center">
+
+                        <a href="#" class="fw-bold text-decoration-none me-4">
+                            Forgot ID?
+                        </a>
+
+                        <a href="#" class="fw-bold text-decoration-none">
+                            Forgot Password?
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ================= Empty Third Column ================= -->
+        <div class="col-lg-4 mb-4">
+            <!-- Intentionally left empty.
+                 The background image will be visible here. -->
+        </div>
+
+    </div>
+
+</div>
+<!-- Dashboard Sidebar -->
+<div class="offcanvas offcanvas-start"
+     tabindex="-1"
+     id="dashboardMenu">
+
+    <div class="offcanvas-header">
+        <h4 class="fw-bold">Dashboard</h4>
+
+        <button type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas">
+        </button>
+    </div>
+
+    <div class="offcanvas-body">
+
+        <div class="list-group">
+
+            <a href="login.html" class="list-group-item list-group-item-action">
+                Home
+            </a>
+
+            <a href="about.html" class="list-group-item list-group-item-action">
+                About NSS
+            </a>
+
+
+            <a href="#" class="list-group-item list-group-item-action">
+                Events
+            </a>
+
+            <a href="#" class="list-group-item list-group-item-action">
+                Gallery
+            </a>
+            <a href="joinus.html" class="list-group-item list-group-item-action">
+                Join Us
+            </a>
+            <a href="achievements.html" class="list-group-item list-group-item-action">
+                Achievements
+            </a>
+<a href="services.html" class="list-group-item list-group-item-action">
+                Request services
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+                Know the Team
+            </a>
+            <a href="grievence.html" class="list-group-item list-group-item-action">
+                Grievance Portal
+            </a>
+
+            <a href="contribute.html" class="list-group-item list-group-item-action">
+                Contribute to NSS
+            </a>
+
+            <a href="contact.html" class="list-group-item list-group-item-action">
+                Contact Us
+            </a>
+        
+
+        </div>
+
+    </div>
+
+</div>
+<script>
+
+let captchaCode = "";
+
+function generateCaptcha() {
+
+    const canvas = document.getElementById("captchaCanvas");
+    const ctx = canvas.getContext("2d");
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = "#f8f9fa";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    const characters =
+        "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+
+    captchaCode = "";
+
+    for (let i = 0; i < 6; i++) {
+
+        captchaCode +=
+            characters.charAt(
+                Math.floor(Math.random() * characters.length)
+            );
+    }
+
+    ctx.font = "bold 28px Arial";
+
+    for (let i = 0; i < captchaCode.length; i++) {
+
+        ctx.save();
+
+        ctx.translate(20 + i * 22, 30);
+
+        ctx.rotate((Math.random() - 0.5) * 0.5);
+
+        ctx.fillStyle =
+            `rgb(${Math.random()*150},
+                 ${Math.random()*150},
+                 ${Math.random()*150})`;
+
+        ctx.fillText(captchaCode[i], 0, 0);
+
+        ctx.restore();
+    }
+
+    for (let i = 0; i < 8; i++) {
+
+        ctx.beginPath();
+
+        ctx.moveTo(
+            Math.random() * canvas.width,
+            Math.random() * canvas.height
+        );
+
+        ctx.lineTo(
+            Math.random() * canvas.width,
+            Math.random() * canvas.height
+        );
+
+        ctx.strokeStyle = "#888";
+
+        ctx.stroke();
+
+    }
+
+}
+
+generateCaptcha();
+
+</script>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+
+function updateDateTime(){
+
+    const now = new Date();
+
+    // Greeting
+
+    let hour = now.getHours();
+
+    let greeting = "";
+
+    if(hour >= 5 && hour < 12){
+
+        greeting = "Good Morning, NSS Volunteer!";
+
+    }
+
+    else if(hour >= 12 && hour < 17){
+
+        greeting = "Good Afternoon, NSS Volunteer!";
+
+    }
+
+    else if(hour >= 17 && hour < 21){
+
+        greeting = "Good Evening, NSS Volunteer!";
+
+    }
+
+    else{
+
+        greeting = "Good Night, NSS Volunteer!";
+
+    }
+
+    document.getElementById("greeting").innerHTML = greeting;
+
+    // Date
+
+    const dateOptions = {
+
+        weekday: 'long',
+
+        day: 'numeric',
+
+        month: 'long',
+
+        year: 'numeric'
+
+    };
+
+    document.getElementById("currentDate").innerHTML =
+        now.toLocaleDateString('en-IN', dateOptions);
+
+    // Time
+
+    document.getElementById("currentTime").innerHTML =
+        now.toLocaleTimeString('en-IN');
+
+}
+
+updateDateTime();
+
+setInterval(updateDateTime,1000);
+
+</script>
+</body>
+</html>

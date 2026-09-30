@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Applicant Form</title>
+
+    <!-- Bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+</head>
+<style>
+body{
+    background-image: url("https://ssfgc.ac.in/wp-content/uploads/2025/11/gsss-fg-mainslider.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+</style>
+<body>
+    <!-- Card -->
+<div class="card shadow-lg rounded-4 mx-auto"
+style="max-width: 900px; width: 100%;">
+
+    <!-- Card Header -->
+<div class="card-header bg-primary text-white text-center py-4">
+
+        <h2 class="fw-bold mb-2">
+            Join NSS – Volunteer Application
+        </h2>
+
+        <p class="mb-0 fs-6">
+            Not a member of any NSS Unit? Apply here to become a volunteer
+            and serve the community with us.
+        </p>
+
+    </div>
+
+<div class="card-body p-4">
+
+<form action="/joinus" method="POST" enctype="multipart/form-data">ard Body Starts Here 
+    <div class="card-body p-4"
+-->
+<!-- ================= Personal Information ================= -->
+
+<h4 class="text-primary fw-bold mb-3">
+    Personal Information
+</h4>
+
+<div class="mb-3">
+    <label class="form-label fw-bold">Full Name *</label>
+    <input type="text"
+           class="form-control"
+           placeholder="Enter your full name">
+</div>
+
+<div class="row">
+
+    <div class="col-md-6 mb-3">
+        <label class="form-label fw-bold">Date of Birth *</label>
+        <input type="date" class="form-control">
+    </div>
+
+    <div class="col-md-6 mb-3">
+        <label class="form-label fw-bold">Gender *</label>
+
+        <select class="form-select">
+            <option selected>Select Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+            <option>Prefer not to say</option>
+        </select>
+    </div>
+
+</div>
+
+<div class="row">
+
+    <div class="col-md-6 mb-3">
+        <label class="form-label fw-bold">Mobile Number *</label>
+        <input type="tel"
+               class="form-control"
+               placeholder="+91 XXXXXXXXXX">
+    </div>
+
+    <div class="col-md-6 mb-3">
+        <label class="form-label fw-bold">Email Address *</label>
+        <input type="email"
+               class="form-control"
+               placeholder="example@gmail.com">
+    </div>
+
+</div>
+
+<div class="mb-3">
+    <label class="form-label fw-bold">Current Address *</label>
+    <textarea class="form-control"
+              rows="3"
+              placeholder="Enter your current address"></textarea>
+</div>
+
+<div class="mb-4">
+    <label class="form-label fw-bold">
+        Upload Passport-size Photograph *
+    </label>
+
+    <input type="file"
+           class="form-control"
+           accept=".jpg,.jpeg,.png">
+</div>
+
+<hr class="my-4">
+
+<!-- ================= Educational Details ================= -->
+
+<h4 class="text-primary fw-bold mb-3">
+    Educational Details
+</h4>
+
+<div class="mb-3">
+    <label class="form-label fw-bold">
+        Current Education Level *
+    </label>
+
+    <select class="form-select">
+        <option selected>Select Education Level</option>
+        <option>PUC I</option>
+        <option>PUC II</option>
+        <option>Diploma</option>
+        <option>Undergraduate (UG)</option>
+        <option>Postgraduate (PG)</option>
+    </select>
+</div>
+
+<div class="mb-3">
+    <label class="form-label fw-bold">
+        Institution Name *
+    </label>
+
+    <input type="text"
+           class="form-control"
+           placeholder="Enter Institution Name">
+</div>
+
+<div class="mb-3">
+    <label class="form-label fw-bold">
+        University / Board *
+    </label>
+
+    <input type="text"
+           class="form-control"
+           placeholder="Example: University of Mysore / Karnataka PU Board">
+</div>
+
+<div class="row">
+
+    <div class="col-md-6 mb-3">
+        <label class="form-label fw-bold">
+            Course *
+        </label>
+
+        <input type="text"
+               class="form-control"
+               placeholder="Example: BCA / B.Com / BBA">
+    </div>
+
+    <div class="col-md-6 mb-3">
+        <label class="form-label fw-bold">
+            Semester / Year *
+        </label>
+
+        <input type="text"
+               class="form-control"
+               placeholder="Example: 3rd Semester / II PUC">
+    </div>
+
+</div>
+
+<div class="mb-4">
+    <label class="form-label fw-bold">
+        Student ID / Roll Number *
+    </label>
+
+    <input type="text"
+           class="form-control"
+           placeholder="Enter Student ID / Roll Number">
+</div>
+<hr class="my-4">
+
+<!-- ================= Page 1 Actions ================= -->
+
+<div class="d-flex justify-content-between flex-wrap gap-2">
+
+    <!-- Know Eligibility -->
+    <a href="eligibility.html"
+       class="btn btn-info text-white fw-bold">
+         Know Eligibility?
+    </a>
+
+    <!-- Save -->
+    <button type="button"
+            class="btn btn-success fw-bold">
+         Save
+    </button>
+
+    <!-- Reset -->
+    <button type="reset"
+            class="btn btn-outline-secondary fw-bold">
+        ↺ Reset
+    </button>
+
+    <!-- Next Page -->
+    <a href="joinus2.html"
+       class="btn btn-primary fw-bold">
+        Next Page →
+    </a>
+
+</div>
+</form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
